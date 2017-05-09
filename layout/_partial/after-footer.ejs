@@ -1,0 +1,25 @@
+<script type="text/javascript">
+    window.onload = function(){
+        var obj = document.getElementsByTagName('pre');
+        for(var i = 0; i < obj.length; i++)
+        {
+            obj[i].classList.add("prettyprint");
+            obj[i].classList.add("linenums");
+        }
+        prettyPrint();}
+
+        var header = document.getElementById("header-nav-index");
+        if(header){
+             window.addEventListener('scroll',winScroll);
+        }
+        function winScroll(e){
+            if(200 < document.body.scrollTop){
+                header.classList.remove("hide"); 
+            };
+            if(200 > document.body.scrollTop){
+                header.classList.add("hide"); 
+            };
+        }
+</script>
+
+<%- js('js/prettify') %>

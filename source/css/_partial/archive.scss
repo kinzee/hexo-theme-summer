@@ -1,0 +1,66 @@
+main.archive {
+    padding-left: 4.4rem;
+}
+
+.archive-title{
+    max-width: 8rem;
+    padding-left: 1.2rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    border-left: 4px solid $color-archive-title-border;
+    color:$color-archive-title;
+}
+
+.archive-num{
+    padding: 2.4rem;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 300;
+    color:$color-archive-num;
+}
+
+
+.archives-wrap {
+    margin-top:4rem;
+}
+
+.archive-year-wrap {
+    .archive-year {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $color-archive-year;
+    }
+}
+
+.archive-article {
+    padding: 1.2rem 0;
+}
+
+.archive-article-header {
+    display: flex;
+}
+
+.archive-article-title {
+    margin-left: 4rem;
+    padding-left: 1.4rem;
+    font-size: 1.6rem;
+    color: $color-archive-article-title;
+    border-left: 1px dashed $color-archive-border-hover;
+    &:hover {
+        padding-left: 2.3rem;
+        border-left: 4px solid$color-archive-border-hover;
+        transition: 0.2s ease-out;
+    }
+}
+
+.archive-article-date {
+    min-width: 8rem;
+    time {
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: 300;
+        color: $color-archive-date;
+    }
+}

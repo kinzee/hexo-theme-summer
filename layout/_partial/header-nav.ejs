@@ -1,0 +1,26 @@
+<% if (is_home()) { %>
+<div id="header-nav-index" class="header-nav-index hide">
+<% }else { %>
+
+<div id="header-nav" class="header-nav-page">
+<% } %>
+     <div id="site-title">
+        <% if (!is_home()) { %>
+        <img class="nav-avatar" src="<%- url_for(theme.avatar) %>" alt="nav-avatar">
+        <% } %>
+        <a href="<%- url_for() %>"><%= config.title %></a>
+    </div>
+    <nav class="site-nav" id="site-nav">
+        <% for (var i in theme.menu){ %>
+            <% if (url_for(theme.menu[i]) == '/' + path.replace('/index.html', '') || (url_for(theme.menu[i]) == '/.' && is_home())) { %>
+                <a class="menu-active" href="<%- url_for(theme.menu[i]) %>">
+                    <%= i %>
+                </a>
+            <% } else { %>
+                <a href="<%- url_for(theme.menu[i]) %>">
+                    <%= i %>
+                </a>
+            <% } %>
+        <% } %>
+    </nav>
+</div>

@@ -1,0 +1,52 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= config.description %>">
+    <meta name="keyword" content="<%= config.keyword %>">
+    <meta name="author" content="<%= config.author %>"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" href="<%= theme.favicon %>">
+    <%
+        var title = page.title;
+
+        if (is_archive()){
+            title = __('archive_a');
+
+            if (is_month()){
+                title += ': ' + page.year + '/' + page.month;
+            } else if (is_year()){
+                title += ': ' + page.year;
+            }
+        } else if (is_category()){
+            title = __('category') + ': ' + page.category;
+        } else if (is_tag()){
+            title = __('tag') + ': ' + page.tag;
+        }
+  %>
+    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+    <% if (theme.rss){ %>
+        <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+    <% } %>
+
+    <% if (theme.favicon){ %>
+        <link rel="icon" href="<%- theme.favicon %>">
+    <% } %>
+
+    <% if (config.highlight.enable){ %>
+        <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <% }else{ %>
+        <%- css('css/prettify') %>
+    <% } %>
+
+    <!-- style -->
+    <%- css('css/main') %>
+    <%- css('css/font-awesome.min') %>
+    
+
+    <!-- analytics -->
+    <%- partial('google-analytics') %>
+    <%- partial('baidu-analytics') %>
+
+</head>

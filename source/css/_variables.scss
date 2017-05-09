@@ -1,0 +1,46 @@
+//color
+$color-white:#fcfcfc;
+$color-sky-l: #67A2A8;
+$color-sky-b:#3E848A;
+$color-firefly: #112233;
+$color-fiord: #445566;
+$color-grey:#eeeeee;
+$color-grey-b:#888;
+$color-clam-shell:#CCC7BA;
+$color-leaf: #2E963D;
+$color-leaf-l:#4DB059;
+$color-res: #FF0000;
+$color-sun:#FFCA9B;
+
+//header
+$color-header-shadow:$color-leaf-l;
+
+
+//article
+$color-article-content:#555;
+
+//tag
+$color-tag-border-hover:$color-leaf-l;
+
+//archive
+$color-archive-title:$color-grey-b;
+$color-archive-title-border:$color-sky-l;
+$color-archive-num:$color-sky-l;
+$color-archive-year:$color-grey-b;
+$color-archive-article-title:$color-leaf;
+$color-archive-border-hover:$color-leaf-l;
+$color-archive-date:$color-clam-shell;
+
+//pagination
+$color-pagnv-border:$color-clam-shell;
+$color-pagnv-font:$color-leaf;
+$color-pagnv-font-hover:$color-white;
+$color-pagnv-back-hover:$color-leaf-l;
+$color-pagnv-border-hover:$color-leaf-l;
+
+//social
+$color-social-font:$color-grey-b;
+$color-social-border:$color-clam-shell;
+$color-social-font-hover:$color-white;
+$color-social-back-hover:$color-sun;
+$color-social-border-hover:$color-white;

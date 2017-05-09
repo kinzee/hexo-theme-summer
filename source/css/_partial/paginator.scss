@@ -1,0 +1,30 @@
+.pagination {
+    position: relative;
+    margin: 28px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: space-around;
+    -ms-flex-pack: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.pagination-prev,
+.pagination-next {
+    color: $color-pagnv-font;
+    font-size: 1.6rem;
+    border: 1px solid $color-pagnv-border;
+    line-height: 30px;
+    height: 32px;
+    padding: 0 20px;
+    border-radius: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    &:hover {
+        color: $color-pagnv-font-hover;
+        background-color: $color-pagnv-back-hover;
+        border-color: $color-pagnv-border-hover;
+    }
+}

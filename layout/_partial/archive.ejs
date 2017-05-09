@@ -1,0 +1,31 @@
+  <% var last; %>
+  <%
+  var title = '';
+  if (page.category) title = page.category;
+  if (page.tag) title = page.tag;
+  if (page.archive){
+    if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+    else title = __('archive_a');
+  }
+%>
+<p class="archive-title"><%= title %></p>
+<p class="archive-num"><%- page.posts.length %>篇</p>
+  <% page.posts.each(function(post, i){ %>
+    <% var year = post.date.year(); %>
+    <% if (last != year){ %>
+      <% if (last != null){ %>
+        </div></section>
+      <% } %>
+      <% last = year; %>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+        </div>
+        <div class="archives">
+    <% } %>
+    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+  <% }) %>
+  <% if (page.posts.length){ %>
+    </div></section>
+  <% } %>
+  <%- partial('_partial/paginator', {page: page}) %>

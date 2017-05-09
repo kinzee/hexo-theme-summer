@@ -1,0 +1,12 @@
+<div id="header">
+    <%- partial('_partial/header-nav') %>
+    <% if (is_home()) { %>
+        <div id="banner">
+            <img class="ban-avatar" src="<%- url_for(theme.avatar) %>" alt="avatar" />
+            <div class="site-info">
+                <h3 class="author"> <%- config.author %> </h3>
+                <h3 class="des" id="site-des"> <%- config.description %> </h3>
+            </div>
+        </div>
+    <% } %>
+</div>

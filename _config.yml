@@ -1,0 +1,46 @@
+# Header
+menu:
+  首页: /
+  归档: /archives
+  标签: /tags
+  关于: /about
+
+# avatar
+avatar: img/avatar.jpg
+
+# favicon
+favicon: /favicon.png
+
+# social
+social:
+  github: https://github.com
+  twitter: https://twitter.com
+  weibo: http://weibo.com
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+
+# Automatically Excerpt.
+# Use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: true
+  length: 300
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+#- archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics:
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:

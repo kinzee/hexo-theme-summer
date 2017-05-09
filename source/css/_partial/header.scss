@@ -1,0 +1,111 @@
+#header {
+    //height: 15rem;
+}
+
+.header-nav {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.4rem;
+    z-index: 99999;
+    height: 6rem;
+    background-color: $color-white;
+    transition: 0.2s ease-out;
+}
+
+.header-nav-index {
+    @extend .header-nav;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 2px solid $color-header-shadow;
+}
+
+.header-nav-page {
+    @extend .header-nav;
+}
+
+#site-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    a {
+        margin-left: 1.4rem;
+        font-size: 2.0rem;
+        font-weight: 800;
+        letter-spacing: 0.8rem;
+        color: $color-fiord;
+        &:hover,
+        &:active {
+            color: $color-leaf;
+        }
+    }
+}
+
+.nav-avatar {
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
+    border: 1px solid $color-clam-shell;
+}
+
+.site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    a {
+        margin-right: 1rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $color-fiord;
+        &:hover,
+        &:active {
+            color: $color-leaf;
+        }
+    }
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 22rem;
+    padding-top: 8rem;
+    text-align: center;
+    .ban-avatar {
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        border: 1px solid $color-clam-shell;
+    }
+    .site-info {
+        margin-top: 0.4rem;
+        h3 {
+            padding-top: 1.0rem;
+        }
+        .author {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: $color-sky-l;
+        }
+        .des {
+            margin-top: 1.4rem;
+            font-family: Palatino, Optima, Georgia, serif;
+            font-size: 2.1rem;
+            font-weight: 500;
+            font-style: italic;
+            color: $color-fiord;
+        }
+    }
+}

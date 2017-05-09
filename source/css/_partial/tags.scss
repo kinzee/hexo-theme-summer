@@ -1,0 +1,21 @@
+.tag-cloud {
+    margin-top: 8rem;
+    a {
+        display: inline-block;
+        padding: 0 1.4rem;
+        color: $color-fiord;
+        text-decoration: none;
+        font-size: 14px;
+        border: none;
+        line-height: 28px;
+        margin: 0.8rem 0.4rem;
+        border: 1px dashed $color-sky-l;
+        border-radius: 4px;
+        &:hover {
+            transition:all 0.2s ease-in-out;
+            transform:scale(1.2);
+            color:$color-leaf;
+            border: 1px solid $color-tag-border-hover;
+        }
+    }
+}

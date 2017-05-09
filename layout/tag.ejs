@@ -1,0 +1,9 @@
+<main class="page">
+<% if (page.path === "tags/index.html"){ %>
+  <div id='tag_cloud' class="tag-cloud">
+      <%- tagcloud(site.tags,{}) %>
+  </div>
+<% } else { %>
+  <%- partial('_partial/archive', {pagination: config.tag, index: true}) %>
+  <% } %>
+</main>
