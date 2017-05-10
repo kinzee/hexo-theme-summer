@@ -6,7 +6,9 @@
             obj[i].classList.add("prettyprint");
             obj[i].classList.add("linenums");
         }
-        prettyPrint();}
+        <% if (!config.highlight.enable){ %>
+            prettyPrint();}
+        <% } %>
 
         var header = document.getElementById("header-nav-index");
         if(header){

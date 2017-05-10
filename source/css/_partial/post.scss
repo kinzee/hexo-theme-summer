@@ -1,3 +1,7 @@
+main.post{
+    padding-left: 0;
+}
+
 article {
     padding-top: 5.6rem;
     padding-bottom: 3.2rem;
@@ -85,10 +89,10 @@ article {
         line-height: 200%;
     }
     a {
-        color: $color-sky-l;
-        border-bottom: 1px dashed $color-sky-l;
+        color: $color-article-a;
+        border-bottom: 1px dashed $color-article-a-border;
         &:hover {
-            border-bottom: 1px solid $color-grey;
+            border-bottom: 1px solid $color-article-a-border-hover;
         }
     }
     img {
@@ -103,6 +107,10 @@ article {
         padding-left: 15px;
         line-height: 2rem;
         border-left: 4px solid $color-leaf;
+    }
+
+    h2{
+        padding: 4rem 0;
     }
 
     h3{
@@ -159,5 +167,24 @@ article {
         margin-top: 1.2rem;
         font-size: 1.6rem;
         color: $color-leaf;
+    }
+}
+
+.toc{
+    float:right;
+    margin-top: 4rem;
+    padding-left: 0.8rem;
+    border-left: 2px solid $color-article-toc-border;
+    font-size: 1.2rem;
+    list-style: none;
+    .toc-level-2 a{
+        color:$color-article-toc-2;
+    }
+    .toc-child{
+        padding-left: 0.4rem;
+        list-style: none;
+        a{
+            color:$color-article-toc-3;
+        }
     }
 }
