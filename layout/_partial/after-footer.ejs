@@ -15,10 +15,10 @@
              window.addEventListener('scroll',winScroll);
         }
         function winScroll(e){
-            if(200 < document.body.scrollTop){
+            if(200 < document.documentElement.scrollTop){
                 header.classList.remove("hide"); 
             };
-            if(200 > document.body.scrollTop){
+            if(200 > document.documentElement.scrollTop){
                 header.classList.add("hide"); 
             };
         }
